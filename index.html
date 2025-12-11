@@ -1,0 +1,2770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 YourTigranMods - Ultimate Premium Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <style>
+        /* ===== GLOBAL VARIABLES & RESET ===== */
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --accent: #00ff95;
+            --accent2: #ff416c;
+            --accent3: #ff9900;
+            --dark: #0a0a19;
+            --darker: #050510;
+            --dark-light: #1a1a2e;
+            --light: #f0f0ff;
+            --gray: #8a8aa3;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient2: linear-gradient(135deg, #11998e, #38ef7d);
+            --gradient3: linear-gradient(135deg, #ff416c, #ff4b2b);
+            --gradient4: linear-gradient(135deg, #ff9900, #ffcc00);
+            --glow: 0 0 30px rgba(106, 17, 203, 0.4);
+            --glow-green: 0 0 30px rgba(0, 255, 149, 0.4);
+            --glow-red: 0 0 30px rgba(255, 65, 108, 0.4);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* ===== BACKGROUND EFFECTS ===== */
+        .bg-effects {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+        
+        .bg-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(106, 17, 203, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(106, 17, 203, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.1;
+        }
+        
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: 10%;
+            left: 5%;
+            animation: float 25s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--secondary);
+            bottom: 20%;
+            right: 10%;
+            animation: float 30s ease-in-out infinite reverse;
+        }
+        
+        .shape-3 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent);
+            top: 60%;
+            left: 70%;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
+        }
+        
+        /* ===== MAIN CONTAINER ===== */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ===== NAVIGATION ===== */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 10, 25, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(106, 17, 203, 0.3);
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-logo i {
+            font-size: 1.5rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .nav-scrolled {
+            padding: 10px 0;
+            background: rgba(10, 10, 25, 0.98);
+            box-shadow: var(--shadow);
+        }
+        
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 60px;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 255, 149, 0.1);
+            color: var(--accent);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 255, 149, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0;
+            flex-wrap: wrap;
+        }
+        
+        .hero-stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* ===== SECTIONS COMMON ===== */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 60px;
+        }
+        
+        /* ===== GENERATOR SECTION ===== */
+        .generator-section {
+            background: rgba(15, 15, 35, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 60px 0;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+            box-shadow: var(--glow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .generator-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(106, 17, 203, 0.1), transparent);
+            animation: shine 3s linear infinite;
+        }
+        
+        /* ===== KEY DISPLAY ===== */
+        .key-display-container {
+            background: rgba(5, 5, 15, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            margin: 40px auto;
+            max-width: 900px;
+            border: 2px solid var(--accent);
+            box-shadow: 
+                inset 0 0 40px rgba(0, 255, 149, 0.2),
+                0 0 50px rgba(0, 255, 149, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .key-display-container::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--accent), transparent 30%);
+            animation: rotate 4s linear infinite;
+            z-index: 0;
+        }
+        
+        .key-display-inner {
+            position: relative;
+            z-index: 1;
+            background: rgba(5, 5, 15, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        .key-label {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        
+        .key-value {
+            font-family: 'Courier New', monospace;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: var(--accent);
+            margin: 30px 0;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            border: 1px dashed var(--accent);
+            word-break: break-all;
+            text-shadow: 0 0 15px rgba(0, 255, 149, 0.7);
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        
+        /* ===== BUTTONS ===== */
+        .btn {
+            padding: 18px 45px;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 5px 20px rgba(106, 17, 203, 0.4);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(106, 17, 203, 0.5);
+        }
+        
+        .btn-accent {
+            background: var(--gradient2);
+            color: #000;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(0, 255, 149, 0.4);
+        }
+        
+        .btn-danger {
+            background: var(--gradient3);
+            color: white;
+            box-shadow: 0 5px 20px rgba(255, 65, 108, 0.4);
+        }
+        
+        .btn-warning {
+            background: var(--gradient4);
+            color: #000;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(106, 17, 203, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        /* ===== AUTH MODALS ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            backdrop-filter: blur(10px);
+            animation: modalFadeIn 0.3s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(10, 10, 25, 0.95);
+            padding: 50px;
+            border-radius: 25px;
+            width: 90%;
+            max-width: 500px;
+            border: 1px solid rgba(106, 17, 203, 0.5);
+            box-shadow: var(--glow);
+            animation: modalSlideIn 0.4s ease;
+        }
+        
+        @keyframes modalSlideIn {
+            from { transform: translate(-50%, -60%); opacity: 0; }
+            to { transform: translate(-50%, -50%); opacity: 1; }
+        }
+        
+        .modal-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .modal-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .modal-subtitle {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            color: var(--gray);
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            background: rgba(255, 65, 108, 0.1);
+            color: var(--accent2);
+        }
+        
+        /* ===== FORMS ===== */
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--light);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(20, 20, 40, 0.8);
+            border: 1px solid rgba(106, 17, 203, 0.3);
+            border-radius: 12px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 255, 149, 0.1);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .form-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .form-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* ===== FEATURES ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .feature-card {
+            background: rgba(20, 20, 40, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(106, 17, 203, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s;
+        }
+        
+        .feature-card:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: var(--glow-green);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+        
+        .feature-description {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* ===== SOCIAL SECTION ===== */
+        .social-section {
+            background: rgba(10, 10, 25, 0.8);
+            border-radius: 30px;
+            padding: 80px 60px;
+            margin: 80px 0;
+            border: 1px solid rgba(255, 65, 108, 0.3);
+            box-shadow: var(--glow-red);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .social-card {
+            background: rgba(20, 20, 40, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            text-decoration: none;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .social-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent2);
+            box-shadow: 0 15px 35px rgba(255, 65, 108, 0.3);
+        }
+        
+        .social-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .telegram { color: #0088cc; }
+        .youtube { color: #ff0000; }
+        .discord { color: #5865f2; }
+        .github { color: white; }
+        .instagram { color: #e4405f; }
+        .twitter { color: #1da1f2; }
+        
+        .social-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .social-description {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* ===== DASHBOARD SECTION ===== */
+        .dashboard-section {
+            background: rgba(15, 15, 35, 0.8);
+            border-radius: 30px;
+            padding: 60px;
+            margin: 60px 0;
+            border: 1px solid rgba(0, 255, 149, 0.3);
+            box-shadow: var(--glow-green);
+        }
+        
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .dashboard-card {
+            background: rgba(20, 20, 40, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+            transition: var(--transition);
+        }
+        
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: var(--glow);
+        }
+        
+        .dashboard-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+        
+        .dashboard-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .dashboard-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .dashboard-change {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .positive { color: var(--accent); }
+        .negative { color: var(--accent2); }
+        
+        /* ===== ADMIN PANEL ===== */
+        .admin-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 3000;
+            backdrop-filter: blur(20px);
+        }
+        
+        .admin-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(5, 5, 15, 0.95);
+            width: 95%;
+            max-width: 1200px;
+            max-height: 90vh;
+            border-radius: 25px;
+            border: 2px solid var(--accent);
+            box-shadow: 
+                inset 0 0 50px rgba(0, 255, 149, 0.1),
+                0 0 60px rgba(0, 255, 149, 0.2);
+            overflow: hidden;
+            display: none;
+        }
+        
+        .admin-header {
+            background: rgba(10, 10, 25, 0.9);
+            padding: 30px;
+            border-bottom: 1px solid rgba(0, 255, 149, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .admin-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .admin-body {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: calc(90vh - 120px);
+        }
+        
+        .admin-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .admin-card {
+            background: rgba(20, 20, 40, 0.6);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+        }
+        
+        .admin-card-title {
+            font-size: 1rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .admin-card-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .admin-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+        }
+        
+        .admin-tab {
+            padding: 12px 25px;
+            background: transparent;
+            border: none;
+            color: var(--gray);
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .admin-tab::after {
+            content: '';
+            position: absolute;
+            bottom: -11px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        
+        .admin-tab.active {
+            color: var(--accent);
+            background: rgba(0, 255, 149, 0.1);
+        }
+        
+        .admin-tab.active::after {
+            transform: scaleX(1);
+        }
+        
+        .admin-tab:hover:not(.active) {
+            color: var(--light);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .admin-table {
+            width: 100%;
+            background: rgba(20, 20, 40, 0.6);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+        }
+        
+        .admin-table th {
+            padding: 20px;
+            text-align: left;
+            background: rgba(10, 10, 25, 0.9);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .admin-table td {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--light);
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .status-active {
+            background: rgba(0, 255, 149, 0.2);
+            color: var(--accent);
+            border: 1px solid rgba(0, 255, 149, 0.3);
+        }
+        
+        .status-pending {
+            background: rgba(255, 153, 0, 0.2);
+            color: var(--accent3);
+            border: 1px solid rgba(255, 153, 0, 0.3);
+        }
+        
+        .status-banned {
+            background: rgba(255, 65, 108, 0.2);
+            color: var(--accent2);
+            border: 1px solid rgba(255, 65, 108, 0.3);
+        }
+        
+        /* ===== FOOTER ===== */
+        .main-footer {
+            background: rgba(5, 5, 15, 0.95);
+            border-top: 1px solid rgba(106, 17, 203, 0.3);
+            padding: 80px 0 40px;
+            margin-top: 100px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .footer-credits {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        /* ===== SECRET ACCESS ===== */
+        .secret-access {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 5000;
+        }
+        
+        .secret-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(106, 17, 203, 0.2);
+            border: 1px solid rgba(106, 17, 203, 0.5);
+            color: var(--accent);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .secret-btn:hover {
+            background: rgba(106, 17, 203, 0.4);
+            transform: rotate(90deg);
+            box-shadow: var(--glow);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .generator-section,
+            .social-section,
+            .dashboard-section {
+                padding: 40px;
+                margin: 40px 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .key-value {
+                font-size: 1.8rem;
+                padding: 20px;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .admin-content {
+                width: 98%;
+                max-height: 95vh;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .key-value {
+                font-size: 1.4rem;
+            }
+            
+            .generator-section,
+            .social-section,
+            .dashboard-section {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* ===== UTILITIES ===== */
+        .text-center { text-align: center; }
+        .text-accent { color: var(--accent); }
+        .text-gradient { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .mb-0 { margin-bottom: 0; }
+        .mb-20 { margin-bottom: 20px; }
+        .mb-30 { margin-bottom: 30px; }
+        .mb-40 { margin-bottom: 40px; }
+        .mb-50 { margin-bottom: 50px; }
+        .mt-0 { margin-top: 0; }
+        .mt-20 { margin-top: 20px; }
+        .mt-30 { margin-top: 30px; }
+        .mt-40 { margin-top: 40px; }
+        .mt-50 { margin-top: 50px; }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 0.6s ease;
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 0.6s ease;
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* ===== CUSTOM SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(10, 10, 25, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient);
+            border-radius: 6px;
+            border: 3px solid rgba(10, 10, 25, 0.8);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="bg-effects">
+        <div class="bg-grid"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                YOURTIGRANMODS
+            </a>
+            
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#generator" class="nav-link">Generator</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#social" class="nav-link">Community</a>
+                <a href="#about" class="nav-link">About</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn-secondary" id="loginBtnNav">Login</button>
+                <button class="btn btn-primary" id="registerBtnNav">Register</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="main-container">
+            <div class="hero-content fade-in">
+                <div class="hero-badge">
+                    <i class="fas fa-bolt"></i>
+                    PREMIUM ACCESS • LIVE UPDATES
+                </div>
+                
+                <h1 class="hero-title">
+                    UNLOCK THE <span class="text-gradient">ULTIMATE</span><br>
+                    PREMIUM EXPERIENCE
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Generate unlimited premium keys for your favorite games and software. 
+                    Join 100,000+ satisfied users worldwide.
+                </p>
+                
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="startGenerating">
+                        <i class="fas fa-play"></i> Start Generating
+                    </button>
+                    <button class="btn btn-secondary" id="learnMore">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="stat-number" id="totalUsers">100K+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number" id="totalKeys">2.5M+</div>
+                        <div class="stat-label">Keys Generated</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number" id="successRate">99.8%</div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="stat-number" id="uptime">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Generator Section -->
+    <section class="section" id="generator">
+        <div class="main-container">
+            <div class="generator-section slide-in-left">
+                <h2 class="section-title">
+                    <i class="fas fa-key"></i> PREMIUM KEY GENERATOR
+                </h2>
+                <p class="section-subtitle">
+                    Generate unique, verified premium keys instantly. Login or register to unlock full access.
+                </p>
+                
+                <div class="key-display-container">
+                    <div class="key-display-inner">
+                        <div class="key-label">YOUR GENERATED PREMIUM KEY</div>
+                        <div class="key-value" id="keyValue">YOURTIGRANMODS-IAMV-1Y6V-CQO3-IU0N</div>
+                        <div class="key-pattern">Pattern: YOURTIGRANMODS-XXXX-XXXX-XXXX-XXXX</div>
+                        
+                        <div class="btn-group">
+                            <button class="btn btn-accent" id="generateKeyBtn">
+                                <i class="fas fa-bolt"></i> Generate New Key
+                            </button>
+                            <button class="btn btn-danger" id="copyKeyBtn">
+                                <i class="far fa-copy"></i> Copy to Clipboard
+                            </button>
+                            <button class="btn btn-warning" id="validateKeyBtn">
+                                <i class="fas fa-check-circle"></i> Validate Key
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="dashboard-title">Key Status</div>
+                        <div class="dashboard-value">VERIFIED</div>
+                        <div class="dashboard-change positive">✓ Active & Working</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="dashboard-title">Validity Period</div>
+                        <div class="dashboard-value">72 HOURS</div>
+                        <div class="dashboard-change">Premium Access</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="dashboard-title">Access Level</div>
+                        <div class="dashboard-value">VIP</div>
+                        <div class="dashboard-change positive">+ All Features</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="dashboard-title">Security</div>
+                        <div class="dashboard-value">MAX</div>
+                        <div class="dashboard-change positive">✓ Protected</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <div class="main-container">
+            <h2 class="section-title">Why Choose Our Platform?</h2>
+            <p class="section-subtitle">Experience the most advanced key generation system with cutting-edge features</p>
+            
+            <div class="features-grid">
+                <div class="feature-card slide-in-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="feature-title">Instant Generation</h3>
+                    <p class="feature-description">
+                        Generate premium keys instantly with our high-speed servers. No waiting, no delays.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Military Security</h3>
+                    <p class="feature-description">
+                        Advanced encryption and security protocols ensure your keys are 100% secure and untraceable.
+                    </p>
+                </div>
+                
+                <div class="feature-card slide-in-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 class="feature-title">Unlimited Access</h3>
+                    <p class="feature-description">
+                        Generate as many keys as you need without any restrictions or limitations.
+                    </p>
+                </div>
+                
+                <div class="feature-card slide-in-left">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="feature-title">High Performance</h3>
+                    <p class="feature-description">
+                        Optimized for speed and reliability with 99.9% uptime guarantee and instant support.
+                    </p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="feature-title">Global Network</h3>
+                    <p class="feature-description">
+                        Access our services from anywhere in the world with low latency and high availability.
+                    </p>
+                </div>
+                
+                <div class="feature-card slide-in-right">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Community Driven</h3>
+                    <p class="feature-description">
+                        Join our growing community of 100K+ users for support, updates, and exclusive content.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Dashboard Section -->
+    <section class="section" id="dashboard">
+        <div class="main-container">
+            <div class="dashboard-section slide-in-left">
+                <h2 class="section-title">User Dashboard</h2>
+                <p class="section-subtitle">Track your activity, manage keys, and access premium features</p>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div class="dashboard-title">Your Keys Generated</div>
+                        <div class="dashboard-value" id="userKeys">0</div>
+                        <div class="dashboard-change">This Month</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="dashboard-title">Account Level</div>
+                        <div class="dashboard-value">BASIC</div>
+                        <div class="dashboard-change positive">Upgrade to Premium</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <div class="dashboard-title">Last Activity</div>
+                        <div class="dashboard-value">NOW</div>
+                        <div class="dashboard-change">Active</div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <div class="dashboard-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="dashboard-title">Achievements</div>
+                        <div class="dashboard-value">5/15</div>
+                        <div class="dashboard-change positive">+2 This Week</div>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button class="btn btn-primary" id="viewHistory">
+                        <i class="fas fa-history"></i> View Key History
+                    </button>
+                    <button class="btn btn-accent" id="upgradeAccount">
+                        <i class="fas fa-crown"></i> Upgrade to Premium
+                    </button>
+                    <button class="btn btn-secondary" id="settingsBtn">
+                        <i class="fas fa-cog"></i> Account Settings
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Section -->
+    <section class="section" id="social">
+        <div class="main-container">
+            <div class="social-section slide-in-right">
+                <h2 class="section-title">Join Our Community</h2>
+                <p class="section-subtitle">Connect with thousands of users, get support, and stay updated</p>
+                
+                <div class="social-grid">
+                    <a href="https://t.me/YourTigranMods" target="_blank" class="social-card">
+                        <i class="fab fa-telegram telegram social-icon"></i>
+                        <h3 class="social-title">Telegram Channel</h3>
+                        <p class="social-description">
+                            Join 50,000+ members for instant updates, giveaways, and exclusive content
+                        </p>
+                    </a>
+                    
+                    <a href="https://youtube.com/c/YourTigranMods" target="_blank" class="social-card">
+                        <i class="fab fa-youtube youtube social-icon"></i>
+                        <h3 class="social-title">YouTube Tutorials</h3>
+                        <p class="social-description">
+                            Watch detailed guides, tutorials, and live streams on our official channel
+                        </p>
+                    </a>
+                    
+                    <a href="https://discord.gg/tigranmods" target="_blank" class="social-card">
+                        <i class="fab fa-discord discord social-icon"></i>
+                        <h3 class="social-title">Discord Server</h3>
+                        <p class="social-description">
+                            Real-time chat, 24/7 support, community events, and voice channels
+                        </p>
+                    </a>
+                    
+                    <a href="https://github.com/YourTigranMods" target="_blank" class="social-card">
+                        <i class="fab fa-github github social-icon"></i>
+                        <h3 class="social-title">GitHub Projects</h3>
+                        <p class="social-description">
+                            Access open-source tools, scripts, and contribute to our projects
+                        </p>
+                    </a>
+                    
+                    <a href="https://instagram.com/YourTigranMods" target="_blank" class="social-card">
+                        <i class="fab fa-instagram instagram social-icon"></i>
+                        <h3 class="social-title">Instagram</h3>
+                        <p class="social-description">
+                            Daily updates, behind the scenes, and community highlights
+                        </p>
+                    </a>
+                    
+                    <a href="https://twitter.com/YourTigranMods" target="_blank" class="social-card">
+                        <i class="fab fa-twitter twitter social-icon"></i>
+                        <h3 class="social-title">Twitter/X</h3>
+                        <p class="social-description">
+                            News, announcements, tech updates, and industry insights
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="main-container">
+            <h2 class="section-title">About YourTigranMods</h2>
+            <p class="section-subtitle">The ultimate platform for premium access and key generation</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="feature-title">Advanced Technology</h3>
+                    <p class="feature-description">
+                        Built with cutting-edge web technologies and optimized for maximum performance.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="feature-title">Secure Infrastructure</h3>
+                    <p class="feature-description">
+                        Enterprise-grade security with multiple layers of protection and encryption.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p class="feature-description">
+                        Round-the-clock support team ready to assist you with any issues or questions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="main-container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>YourTigranMods</h3>
+                    <p style="color: var(--gray); margin-bottom: 20px;">
+                        The ultimate platform for premium key generation and access.
+                    </p>
+                    <div class="btn-group" style="justify-content: flex-start;">
+                        <button class="btn btn-primary" id="footerLogin">Login</button>
+                        <button class="btn btn-secondary" id="footerRegister">Register</button>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#generator"><i class="fas fa-chevron-right"></i> Generator</a></li>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> Features</a></li>
+                        <li><a href="#dashboard"><i class="fas fa-chevron-right"></i> Dashboard</a></li>
+                        <li><a href="#social"><i class="fas fa-chevron-right"></i> Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" id="termsLinkFooter"><i class="fas fa-chevron-right"></i> Terms of Service</a></li>
+                        <li><a href="#" id="privacyLinkFooter"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="#" id="supportLinkFooter"><i class="fas fa-chevron-right"></i> 24/7 Support</a></li>
+                        <li><a href="#" id="faqLinkFooter"><i class="fas fa-chevron-right"></i> FAQ</a></li>
+                        <li><a href="#" id="apiLinkFooter"><i class="fas fa-chevron-right"></i> API Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@yourtigranmods.com"><i class="fas fa-envelope"></i> Email Support</a></li>
+                        <li><a href="https://t.me/YourTigranMods" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+                        <li><a href="https://discord.gg/tigranmods" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://twitter.com/YourTigranMods" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 YourTigranMods. All rights reserved.</p>
+                <p class="footer-credits">
+                    Made with <i class="fas fa-heart" style="color: var(--accent2);"></i> for the gaming community
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Secret Access Button (Hidden) -->
+    <div class="secret-access">
+        <button class="secret-btn" id="secretAdminBtn">
+            <i class="fas fa-user-secret"></i>
+        </button>
+    </div>
+    
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeLoginModal">&times;</button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-sign-in-alt"></i> Login to Account
+                </h2>
+                <p class="modal-subtitle">Access your dashboard and premium features</p>
+            </div>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label" for="loginEmail">Email or Username</label>
+                    <input type="text" id="loginEmail" class="form-input" placeholder="Enter your email or username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="loginTelegram">Telegram Username</label>
+                    <input type="text" id="loginTelegram" class="form-input" placeholder="@yourtelegram" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" class="form-input" placeholder="Enter your password" required>
+                </div>
+                
+                <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="rememberMe" style="width: auto;">
+                    <label for="rememberMe" style="margin: 0; color: var(--gray);">Remember me</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-sign-in-alt"></i> Login to Account
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>Don't have an account? <a href="#" class="form-link" id="switchToRegister">Create new account</a></p>
+                <p><a href="#" class="form-link" id="forgotPassword">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeRegisterModal">&times;</button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-user-plus"></i> Create New Account
+                </h2>
+                <p class="modal-subtitle">Join our community of 100,000+ users</p>
+            </div>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label class="form-label" for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" class="form-input" placeholder="Choose a username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="registerEmail">Email Address</label>
+                    <input type="email" id="registerEmail" class="form-input" placeholder="your@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="registerTelegram">Telegram Username</label>
+                    <input type="text" id="registerTelegram" class="form-input" placeholder="@yourtelegram (optional)" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="registerPassword">Create Password</label>
+                    <input type="password" id="registerPassword" class="form-input" placeholder="Create strong password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="registerConfirmPassword">Confirm Password</label>
+                    <input type="password" id="registerConfirmPassword" class="form-input" placeholder="Confirm your password" required>
+                </div>
+                
+                <div class="form-group" style="display: flex; align-items: center; gap: 10px;">
+                    <input type="checkbox" id="acceptTerms" style="width: auto;" required>
+                    <label for="acceptTerms" style="margin: 0; color: var(--gray);">
+                        I agree to the <a href="#" class="form-link">Terms of Service</a> and <a href="#" class="form-link">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-user-plus"></i> Create Account
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" class="form-link" id="switchToLogin">Login here</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Admin Login Modal (Hidden) -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeAdminLoginModal">&times;</button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    <i class="fas fa-user-shield"></i> Admin Access
+                </h2>
+                <p class="modal-subtitle">Restricted area - Authorized personnel only</p>
+            </div>
+            
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label class="form-label" for="adminEmail">Admin Email</label>
+                    <input type="email" id="adminEmail" class="form-input" placeholder="admin@yourtigranmods.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="adminTelegram">Telegram Username</label>
+                    <input type="text" id="adminTelegram" class="form-input" placeholder="@admintelegram" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="adminPassword">Admin Password</label>
+                    <input type="password" id="adminPassword" class="form-input" placeholder="Enter admin password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="admin2FA">2FA Code</label>
+                    <input type="text" id="admin2FA" class="form-input" placeholder="6-digit code" maxlength="6">
+                </div>
+                
+                <button type="submit" class="btn btn-danger" style="width: 100%;">
+                    <i class="fas fa-shield-alt"></i> Access Admin Panel
+                </button>
+            </form>
+            
+            <div class="form-footer">
+                <p style="color: var(--accent2); font-size: 0.8rem;">
+                    <i class="fas fa-exclamation-triangle"></i> Unauthorized access is strictly prohibited
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Admin Panel -->
+    <div class="admin-modal" id="adminModal">
+        <div class="admin-content" id="adminPanelContent">
+            <div class="admin-header">
+                <h2 class="admin-title">
+                    <i class="fas fa-cogs"></i> SYSTEM ADMIN PANEL
+                </h2>
+                <button class="btn btn-danger" id="logoutAdmin">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+            
+            <div class="admin-body">
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="overview">Overview</button>
+                    <button class="admin-tab" data-tab="users">Users</button>
+                    <button class="admin-tab" data-tab="keys">Keys</button>
+                    <button class="admin-tab" data-tab="system">System</button>
+                    <button class="admin-tab" data-tab="settings">Settings</button>
+                </div>
+                
+                <!-- Overview Tab -->
+                <div class="admin-tab-content active" id="overviewTab">
+                    <div class="admin-grid">
+                        <div class="admin-card">
+                            <div class="admin-card-title">Total Users</div>
+                            <div class="admin-card-value">124,892</div>
+                        </div>
+                        <div class="admin-card">
+                            <div class="admin-card-title">Active Today</div>
+                            <div class="admin-card-value">8,247</div>
+                        </div>
+                        <div class="admin-card">
+                            <div class="admin-card-title">Keys Generated</div>
+                            <div class="admin-card-value">2.5M</div>
+                        </div>
+                        <div class="admin-card">
+                            <div class="admin-card-title">Revenue</div>
+                            <div class="admin-card-value">$124,892</div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="color: var(--accent); margin: 40px 0 20px;">Recent Activity</h3>
+                    <div class="admin-table">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>User</th>
+                                    <th>Action</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="activityTable">
+                                <!-- Filled by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Users Tab -->
+                <div class="admin-tab-content" id="usersTab">
+                    <h3 style="color: var(--accent); margin-bottom: 20px;">User Management</h3>
+                    <div class="admin-table">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Telegram</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTable">
+                                <!-- Filled by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Keys Tab -->
+                <div class="admin-tab-content" id="keysTab">
+                    <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                        <button class="btn btn-accent" id="generateBulkKeys">
+                            <i class="fas fa-key"></i> Generate 100 Keys
+                        </button>
+                        <button class="btn btn-primary" id="exportAllKeys">
+                            <i class="fas fa-download"></i> Export All
+                        </button>
+                        <button class="btn btn-danger" id="clearOldKeys">
+                            <i class="fas fa-trash"></i> Clear Expired
+                        </button>
+                    </div>
+                    
+                    <div class="admin-table">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>Key</th>
+                                    <th>Generated</th>
+                                    <th>User</th>
+                                    <th>Status</th>
+                                    <th>Expires</th>
+                                </tr>
+                            </thead>
+                            <tbody id="keysTable">
+                                <!-- Filled by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification System -->
+    <div class="modal" id="notificationModal" style="display: none; z-index: 4000; background: transparent; pointer-events: none;">
+        <div class="modal-content" style="max-width: 400px; background: rgba(10, 10, 25, 0.95); border-color: var(--accent); animation: none; transform: translate(-50%, 20px);">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 1.5rem; color: var(--accent);">
+                    <i class="fas fa-check-circle" id="notificationIcon"></i>
+                </div>
+                <div>
+                    <div style="font-weight: 600; color: var(--light);" id="notificationTitle"></div>
+                    <div style="color: var(--gray); font-size: 0.9rem; margin-top: 5px;" id="notificationMessage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // ===== SECRET ADMIN CREDENTIALS (HIDDEN IN PRODUCTION) =====
+        const SECRET_ADMINS = {
+            // 👑 OWNER ACCOUNT (Full Access)
+            owner: {
+                email: "owner@yourtigranmods.com",
+                telegram: "@tigran_owner",
+                password: "TigranUltimateOwner2024!Secure",
+                role: "owner",
+                permissions: ["all"]
+            },
+            
+            // 🔧 ADMIN ACCOUNT (Management Access)
+            admin: {
+                email: "admin@yourtigranmods.com",
+                telegram: "@tigran_admin",
+                password: "YourTigranModsAdmin2024!Secure",
+                role: "admin",
+                permissions: ["users", "keys", "content"]
+            },
+            
+            // 👁️ MODERATOR ACCOUNT (Limited Access)
+            moderator: {
+                email: "moderator@yourtigranmods.com",
+                telegram: "@tigran_mod",
+                password: "TigranModeratorAccess2024!",
+                role: "moderator",
+                permissions: ["users", "content"]
+            }
+        };
+        
+        // ===== APPLICATION STATE =====
+        const APP_STATE = {
+            currentUser: null,
+            isLoggedIn: false,
+            isAdmin: false,
+            generatedKeys: [],
+            userKeys: 0,
+            totalKeys: 2500000,
+            totalUsers: 124892,
+            notifications: []
+        };
+        
+        // ===== DOM ELEMENTS =====
+        const elements = {
+            // Modals
+            loginModal: document.getElementById('loginModal'),
+            registerModal: document.getElementById('registerModal'),
+            adminLoginModal: document.getElementById('adminLoginModal'),
+            adminModal: document.getElementById('adminModal'),
+            adminPanelContent: document.getElementById('adminPanelContent'),
+            notificationModal: document.getElementById('notificationModal'),
+            
+            // Buttons
+            loginBtnNav: document.getElementById('loginBtnNav'),
+            registerBtnNav: document.getElementById('registerBtnNav'),
+            startGenerating: document.getElementById('startGenerating'),
+            generateKeyBtn: document.getElementById('generateKeyBtn'),
+            copyKeyBtn: document.getElementById('copyKeyBtn'),
+            validateKeyBtn: document.getElementById('validateKeyBtn'),
+            secretAdminBtn: document.getElementById('secretAdminBtn'),
+            
+            // Forms
+            loginForm: document.getElementById('loginForm'),
+            registerForm: document.getElementById('registerForm'),
+            adminLoginForm: document.getElementById('adminLoginForm'),
+            
+            // Key Display
+            keyValue: document.getElementById('keyValue'),
+            
+            // Stats
+            totalUsers: document.getElementById('totalUsers'),
+            totalKeys: document.getElementById('totalKeys'),
+            userKeys: document.getElementById('userKeys')
+        };
+        
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            initEventListeners();
+            initAnimations();
+            updateLiveStats();
+            
+            // Add console greeting
+            console.log('%c🔐 SECURE ADMIN ACCESS INITIALIZED', 'color: #00ff95; font-size: 16px; font-weight: bold;');
+            console.log('%c⚠️ Administrative credentials are securely embedded', 'color: #ff9900; font-size: 12px;');
+            
+            // Auto-check for saved session
+            checkSavedSession();
+        });
+        
+        // ===== EVENT LISTENERS =====
+        function initEventListeners() {
+            // Navigation buttons
+            elements.loginBtnNav.addEventListener('click', () => showModal('login'));
+            elements.registerBtnNav.addEventListener('click', () => showModal('register'));
+            
+            // Generator buttons
+            elements.startGenerating.addEventListener('click', generateNewKey);
+            elements.generateKeyBtn.addEventListener('click', generateNewKey);
+            elements.copyKeyBtn.addEventListener('click', copyKeyToClipboard);
+            elements.validateKeyBtn.addEventListener('click', validateKey);
+            
+            // Footer buttons
+            document.getElementById('footerLogin').addEventListener('click', () => showModal('login'));
+            document.getElementById('footerRegister').addEventListener('click', () => showModal('register'));
+            
+            // Modal close buttons
+            document.getElementById('closeLoginModal').addEventListener('click', () => hideModal('login'));
+            document.getElementById('closeRegisterModal').addEventListener('click', () => hideModal('register'));
+            document.getElementById('closeAdminLoginModal').addEventListener('click', () => hideModal('adminLogin'));
+            
+            // Form switches
+            document.getElementById('switchToRegister').addEventListener('click', (e) => {
+                e.preventDefault();
+                hideModal('login');
+                showModal('register');
+            });
+            
+            document.getElementById('switchToLogin').addEventListener('click', (e) => {
+                e.preventDefault();
+                hideModal('register');
+                showModal('login');
+            });
+            
+            // Secret admin button
+            elements.secretAdminBtn.addEventListener('click', () => {
+                showModal('adminLogin');
+            });
+            
+            // Form submissions
+            elements.loginForm.addEventListener('submit', handleLogin);
+            elements.registerForm.addEventListener('submit', handleRegister);
+            elements.adminLoginForm.addEventListener('submit', handleAdminLogin);
+            
+            // Admin logout
+            document.getElementById('logoutAdmin').addEventListener('click', logoutAdmin);
+            
+            // Close modals on outside click
+            window.addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) {
+                    hideAllModals();
+                }
+            });
+            
+            // Admin tabs
+            document.querySelectorAll('.admin-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    switchAdminTab(tabId);
+                });
+            });
+            
+            // Admin actions
+            document.getElementById('generateBulkKeys').addEventListener('click', generateBulkAdminKeys);
+            document.getElementById('exportAllKeys').addEventListener('click', exportAllKeys);
+            document.getElementById('clearOldKeys').addEventListener('click', clearOldKeys);
+            
+            // Keyboard shortcuts
+            document.addEventListener('keydown', handleKeyboardShortcuts);
+            
+            // Smooth scroll for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Nav scroll effect
+            window.addEventListener('scroll', handleNavScroll);
+        }
+        
+        // ===== MODAL MANAGEMENT =====
+        function showModal(modalName) {
+            hideAllModals();
+            
+            switch(modalName) {
+                case 'login':
+                    elements.loginModal.style.display = 'block';
+                    break;
+                case 'register':
+                    elements.registerModal.style.display = 'block';
+                    break;
+                case 'adminLogin':
+                    elements.adminLoginModal.style.display = 'block';
+                    break;
+                case 'admin':
+                    elements.adminModal.style.display = 'block';
+                    elements.adminPanelContent.style.display = 'block';
+                    loadAdminPanel();
+                    break;
+            }
+        }
+        
+        function hideModal(modalName) {
+            switch(modalName) {
+                case 'login':
+                    elements.loginModal.style.display = 'none';
+                    break;
+                case 'register':
+                    elements.registerModal.style.display = 'none';
+                    break;
+                case 'adminLogin':
+                    elements.adminLoginModal.style.display = 'none';
+                    break;
+                case 'admin':
+                    elements.adminModal.style.display = 'none';
+                    elements.adminPanelContent.style.display = 'none';
+                    break;
+            }
+        }
+        
+        function hideAllModals() {
+            elements.loginModal.style.display = 'none';
+            elements.registerModal.style.display = 'none';
+            elements.adminLoginModal.style.display = 'none';
+            elements.adminModal.style.display = 'none';
+            elements.adminPanelContent.style.display = 'none';
+        }
+        
+        // ===== USER AUTHENTICATION =====
+        function handleLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const telegram = document.getElementById('loginTelegram').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simple validation
+            if (!email || !telegram || !password) {
+                showNotification('Error', 'Please fill in all fields', 'error');
+                return;
+            }
+            
+            // For demo purposes, accept any login
+            APP_STATE.currentUser = {
+                email: email,
+                telegram: telegram,
+                username: email.split('@')[0]
+            };
+            APP_STATE.isLoggedIn = true;
+            
+            showNotification('Success', 'Logged in successfully!', 'success');
+            hideModal('login');
+            
+            // Update UI
+            updateUserUI();
+        }
+        
+        function handleRegister(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('registerUsername').value;
+            const email = document.getElementById('registerEmail').value;
+            const telegram = document.getElementById('registerTelegram').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('registerConfirmPassword').value;
+            
+            // Validation
+            if (!username || !email || !telegram || !password || !confirmPassword) {
+                showNotification('Error', 'Please fill in all fields', 'error');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                showNotification('Error', 'Passwords do not match', 'error');
+                return;
+            }
+            
+            if (password.length < 8) {
+                showNotification('Error', 'Password must be at least 8 characters', 'error');
+                return;
+            }
+            
+            // Create user account
+            APP_STATE.currentUser = {
+                username: username,
+                email: email,
+                telegram: telegram,
+                joined: new Date().toISOString()
+            };
+            APP_STATE.isLoggedIn = true;
+            APP_STATE.totalUsers++;
+            
+            showNotification('Success', 'Account created successfully!', 'success');
+            hideModal('register');
+            
+            // Update UI
+            updateUserUI();
+            updateLiveStats();
+        }
+        
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('adminEmail').value;
+            const telegram = document.getElementById('adminTelegram').value;
+            const password = document.getElementById('adminPassword').value;
+            
+            // Check against secret admin credentials
+            let authenticatedAdmin = null;
+            
+            for (const [key, admin] of Object.entries(SECRET_ADMINS)) {
+                if (admin.email === email && admin.telegram === telegram && admin.password === password) {
+                    authenticatedAdmin = { ...admin, key: key };
+                    break;
+                }
+            }
+            
+            if (authenticatedAdmin) {
+                APP_STATE.isAdmin = true;
+                APP_STATE.currentUser = {
+                    ...authenticatedAdmin,
+                    isAdmin: true
+                };
+                
+                showNotification('Access Granted', `Welcome, ${authenticatedAdmin.role.toUpperCase()}`, 'success');
+                hideModal('adminLogin');
+                showModal('admin');
+                
+                // Log admin access (for security monitoring)
+                console.log(`%c🔓 ADMIN LOGIN: ${authenticatedAdmin.role} accessed at ${new Date().toISOString()}`, 'color: #00ff95;');
+            } else {
+                showNotification('Access Denied', 'Invalid admin credentials', 'error');
+                console.log(`%c🚨 FAILED ADMIN LOGIN ATTEMPT from ${email}`, 'color: #ff416c;');
+            }
+        }
+        
+        function logoutAdmin() {
+            APP_STATE.isAdmin = false;
+            APP_STATE.currentUser = null;
+            hideModal('admin');
+            showNotification('Logged Out', 'Admin session terminated', 'info');
+        }
+        
+        // ===== KEY GENERATION =====
+        function generateNewKey() {
+            if (!APP_STATE.isLoggedIn) {
+                showNotification('Login Required', 'Please login to generate keys', 'warning');
+                showModal('login');
+                return;
+            }
+            
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let newKey = 'YOURTIGRANMODS-';
+            
+            for (let segment = 0; segment < 4; segment++) {
+                let segmentStr = '';
+                for (let i = 0; i < 4; i++) {
+                    segmentStr += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                newKey += segmentStr;
+                if (segment < 3) newKey += '-';
+            }
+            
+            // Update display
+            elements.keyValue.textContent = newKey;
+            
+            // Add to history
+            APP_STATE.generatedKeys.unshift({
+                key: newKey,
+                timestamp: new Date().toISOString(),
+                user: APP_STATE.currentUser?.email || 'guest'
+            });
+            
+            // Update stats
+            APP_STATE.userKeys++;
+            APP_STATE.totalKeys++;
+            elements.userKeys.textContent = APP_STATE.userKeys;
+            updateLiveStats();
+            
+            // Animation
+            animateKeyGeneration();
+            
+            showNotification('Key Generated', 'New premium key created successfully!', 'success');
+        }
+        
+        function copyKeyToClipboard() {
+            const key = elements.keyValue.textContent;
+            
+            navigator.clipboard.writeText(key).then(() => {
+                showNotification('Copied', 'Key copied to clipboard!', 'success');
+                
+                // Visual feedback
+                elements.copyKeyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                setTimeout(() => {
+                    elements.copyKeyBtn.innerHTML = '<i class="far fa-copy"></i> Copy to Clipboard';
+                }, 2000);
+            }).catch(err => {
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = key;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification('Copied', 'Key copied to clipboard!', 'success');
+            });
+        }
+        
+        function validateKey() {
+            const key = elements.keyValue.textContent;
+            
+            // Animation
+            elements.keyValue.style.animation = 'pulse 0.5s';
+            setTimeout(() => {
+                elements.keyValue.style.animation = '';
+            }, 500);
+            
+            showNotification('Key Validated', 'Premium key is active and working!', 'success');
+        }
+        
+        // ===== ADMIN FUNCTIONS =====
+        function loadAdminPanel() {
+            // Load admin data
+            loadAdminTables();
+            updateAdminStats();
+        }
+        
+        function loadAdminTables() {
+            // Activity table
+            const activityTable = document.getElementById('activityTable');
+            activityTable.innerHTML = '';
+            
+            const activities = [
+                { time: '2 min ago', user: 'user123', action: 'Generated key', status: 'success' },
+                { time: '5 min ago', user: 'admin', action: 'Logged in', status: 'info' },
+                { time: '10 min ago', user: 'premium_user', action: 'Upgraded account', status: 'success' },
+                { time: '15 min ago', user: 'system', action: 'Auto-backup', status: 'info' },
+                { time: '30 min ago', user: 'moderator', action: 'Banned user', status: 'warning' }
+            ];
+            
+            activities.forEach(activity => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${activity.time}</td>
+                    <td>${activity.user}</td>
+                    <td>${activity.action}</td>
+                    <td><span class="status-badge status-${activity.status}">${activity.status.toUpperCase()}</span></td>
+                `;
+                activityTable.appendChild(row);
+            });
+            
+            // Users table
+            const usersTable = document.getElementById('usersTable');
+            usersTable.innerHTML = '';
+            
+            const users = [
+                { id: 1001, username: 'tigran_owner', email: 'owner@yourtigranmods.com', telegram: '@tigran_owner', status: 'active' },
+                { id: 1002, username: 'tigran_admin', email: 'admin@yourtigranmods.com', telegram: '@tigran_admin', status: 'active' },
+                { id: 1003, username: 'premium_user', email: 'user@example.com', telegram: '@premium', status: 'active' },
+                { id: 1004, username: 'tester', email: 'test@test.com', telegram: '@tester', status: 'pending' },
+                { id: 1005, username: 'violator', email: 'bad@user.com', telegram: '@violator', status: 'banned' }
+            ];
+            
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                    <td>${user.telegram}</td>
+                    <td><span class="status-badge status-${user.status}">${user.status.toUpperCase()}</span></td>
+                    <td>
+                        <button class="btn btn-secondary" style="padding: 5px 10px; font-size: 0.8rem;">Edit</button>
+                        <button class="btn btn-danger" style="padding: 5px 10px; font-size: 0.8rem;">Ban</button>
+                    </td>
+                `;
+                usersTable.appendChild(row);
+            });
+            
+            // Keys table
+            const keysTable = document.getElementById('keysTable');
+            keysTable.innerHTML = '';
+            
+            for (let i = 0; i < 5; i++) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                let key = 'YOURTIGRANMODS-';
+                
+                for (let segment = 0; segment < 4; segment++) {
+                    let segmentStr = '';
+                    for (let j = 0; j < 4; j++) {
+                        segmentStr += chars.charAt(Math.floor(Math.random() * chars.length));
+                    }
+                    key += segmentStr;
+                    if (segment < 3) key += '-';
+                }
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><code>${key}</code></td>
+                    <td>${new Date(Date.now() - Math.random() * 86400000).toLocaleDateString()}</td>
+                    <td>user${Math.floor(Math.random() * 1000)}</td>
+                    <td><span class="status-badge status-active">ACTIVE</span></td>
+                    <td>${new Date(Date.now() + 86400000 * 3).toLocaleDateString()}</td>
+                `;
+                keysTable.appendChild(row);
+            }
+        }
+        
+        function updateAdminStats() {
+            // Update admin card values
+            document.querySelectorAll('.admin-card-value')[0].textContent = APP_STATE.totalUsers.toLocaleString();
+            document.querySelectorAll('.admin-card-value')[1].textContent = Math.floor(APP_STATE.totalUsers * 0.07).toLocaleString();
+            document.querySelectorAll('.admin-card-value')[2].textContent = APP_STATE.totalKeys.toLocaleString();
+            document.querySelectorAll('.admin-card-value')[3].textContent = '$' + (APP_STATE.totalUsers * 1.99).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+        
+        function switchAdminTab(tabId) {
+            // Update active tab
+            document.querySelectorAll('.admin-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelector(`.admin-tab[data-tab="${tabId}"]`).classList.add('active');
+            
+            // Show active content
+            document.querySelectorAll('.admin-tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`${tabId}Tab`).classList.add('active');
+        }
+        
+        function generateBulkAdminKeys() {
+            const count = 100;
+            APP_STATE.totalKeys += count;
+            updateAdminStats();
+            updateLiveStats();
+            showNotification('Keys Generated', `${count} new keys created successfully`, 'success');
+            loadAdminTables(); // Refresh the keys table
+        }
+        
+        function exportAllKeys() {
+            showNotification('Export Started', 'Preparing key export file...', 'info');
+            setTimeout(() => {
+                showNotification('Export Complete', 'Keys exported to file successfully', 'success');
+            }, 1500);
+        }
+        
+        function clearOldKeys() {
+            if (confirm('Are you sure you want to clear all expired keys?')) {
+                showNotification('Keys Cleared', 'Expired keys have been removed', 'success');
+            }
+        }
+        
+        // ===== UI UPDATES =====
+        function updateUserUI() {
+            if (APP_STATE.isLoggedIn) {
+                // Update nav buttons
+                elements.loginBtnNav.style.display = 'none';
+                elements.registerBtnNav.style.display = 'none';
+                
+                // Add user menu (simplified for demo)
+                const userMenu = document.createElement('div');
+                userMenu.innerHTML = `
+                    <button class="btn btn-secondary" style="padding: 8px 15px;">
+                        <i class="fas fa-user"></i> ${APP_STATE.currentUser.username}
+                    </button>
+                `;
+                document.querySelector('.nav-actions').appendChild(userMenu);
+            }
+        }
+        
+        function updateLiveStats() {
+            // Update hero stats
+            elements.totalUsers.textContent = APP_STATE.totalUsers.toLocaleString() + '+';
+            elements.totalKeys.textContent = APP_STATE.totalKeys.toLocaleString() + '+';
+            
+            // Increment stats slightly (for demo effect)
+            setInterval(() => {
+                APP_STATE.totalUsers += Math.floor(Math.random() * 10);
+                APP_STATE.totalKeys += Math.floor(Math.random() * 100);
+                elements.totalUsers.textContent = APP_STATE.totalUsers.toLocaleString() + '+';
+                elements.totalKeys.textContent = APP_STATE.totalKeys.toLocaleString() + '+';
+            }, 10000);
+        }
+        
+        // ===== ANIMATIONS =====
+        function initAnimations() {
+            // Add animation classes to elements
+            const animatedElements = document.querySelectorAll('.slide-in-left, .slide-in-right, .fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+        }
+        
+        function animateKeyGeneration() {
+            const keyElement = elements.keyValue;
+            
+            // Reset animation
+            keyElement.style.animation = 'none';
+            void keyElement.offsetWidth; // Trigger reflow
+            
+            // Add animation
+            keyElement.style.animation = 'pulse 0.5s';
+            
+            // Color effect
+            keyElement.style.color = '#00ffcc';
+            keyElement.style.textShadow = '0 0 20px rgba(0, 255, 204, 0.7)';
+            
+            setTimeout(() => {
+                keyElement.style.color = '#00ff95';
+                keyElement.style.textShadow = '0 0 10px rgba(0, 255, 149, 0.5)';
+            }, 500);
+        }
+        
+        // ===== NAV SCROLL EFFECT =====
+        function handleNavScroll() {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        }
+        
+        // ===== NOTIFICATION SYSTEM =====
+        function showNotification(title, message, type = 'info') {
+            const modal = elements.notificationModal;
+            const icon = document.getElementById('notificationIcon');
+            const titleEl = document.getElementById('notificationTitle');
+            const messageEl = document.getElementById('notificationMessage');
+            
+            // Set type-based styling
+            let iconClass, borderColor;
+            switch(type) {
+                case 'success':
+                    iconClass = 'fas fa-check-circle';
+                    borderColor = '#00ff95';
+                    break;
+                case 'error':
+                    iconClass = 'fas fa-exclamation-circle';
+                    borderColor = '#ff416c';
+                    break;
+                case 'warning':
+                    iconClass = 'fas fa-exclamation-triangle';
+                    borderColor = '#ff9900';
+                    break;
+                default:
+                    iconClass = 'fas fa-info-circle';
+                    borderColor = '#2575fc';
+            }
+            
+            // Update content
+            icon.className = iconClass;
+            icon.style.color = borderColor;
+            titleEl.textContent = title;
+            messageEl.textContent = message;
+            
+            // Show modal
+            modal.style.display = 'block';
+            modal.querySelector('.modal-content').style.borderColor = borderColor;
+            
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 3000);
+        }
+        
+        // ===== KEYBOARD SHORTCUTS =====
+        function handleKeyboardShortcuts(e) {
+            // Ctrl+G or Cmd+G to generate key
+            if ((e.ctrlKey || e.metaKey) && e.key === 'g') {
+                e.preventDefault();
+                generateNewKey();
+            }
+            
+            // Ctrl+C or Cmd+C to copy key
+            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
+                e.preventDefault();
+                copyKeyToClipboard();
+            }
+            
+            // Ctrl+L or Cmd+L for login
+            if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
+                e.preventDefault();
+                showModal('login');
+            }
+            
+            // Ctrl+Shift+A for admin (secret)
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'A') {
+                e.preventDefault();
+                showModal('adminLogin');
+            }
+            
+            // Escape to close modals
+            if (e.key === 'Escape') {
+                hideAllModals();
+            }
+        }
+        
+        // ===== SESSION MANAGEMENT =====
+        function checkSavedSession() {
+            // Check for saved session in localStorage
+            const savedSession = localStorage.getItem('tigranmods_session');
+            if (savedSession) {
+                try {
+                    const session = JSON.parse(savedSession);
+                    if (session.expires > Date.now()) {
+                        APP_STATE.currentUser = session.user;
+                        APP_STATE.isLoggedIn = true;
+                        updateUserUI();
+                        showNotification('Welcome Back', `Logged in as ${session.user.username}`, 'info');
+                    }
+                } catch (e) {
+                    // Invalid session
+                    localStorage.removeItem('tigranmods_session');
+                }
+            }
+        }
+        
+        function saveSession() {
+            if (APP_STATE.currentUser) {
+                const session = {
+                    user: APP_STATE.currentUser,
+                    expires: Date.now() + (7 * 24 * 60 * 60 * 1000) // 7 days
+                };
+                localStorage.setItem('tigranmods_session', JSON.stringify(session));
+            }
+        }
+        
+        // ===== ADDITIONAL FEATURES =====
+        
+        // Dark mode toggle (hidden feature)
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        }
+        
+        // Initialize dark mode preference
+        const darkModePref = localStorage.getItem('darkMode');
+        if (darkModePref === 'light') {
+            document.body.classList.add('light-mode');
+        }
+        
+        // Add Easter egg
+        let konamiCode = [];
+        const konamiSequence = [
+            'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+            'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+            'b', 'a'
+        ];
+        
+        document.addEventListener('keydown', (e) => {
+            konamiCode.push(e.key);
+            if (konamiCode.length > konamiSequence.length) {
+                konamiCode.shift();
+            }
+            
+            if (konamiCode.join(',') === konamiSequence.join(',')) {
+                showNotification('Easter Egg!', 'You found the secret konami code!', 'success');
+                // Add some fun effect
+                document.body.style.animation = 'pulse 1s';
+                setTimeout(() => {
+                    document.body.style.animation = '';
+                }, 1000);
+                konamiCode = [];
+            }
+        });
+        
+        // Add page load effects
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                showNotification('Welcome', 'YourTigranMods platform is ready!', 'info');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
